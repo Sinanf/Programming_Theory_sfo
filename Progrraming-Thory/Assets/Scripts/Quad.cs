@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Quad : Shapes //INHERITANCE
 {
-    private int _faces = 1;
+    private int _faces = 2;
 
 
     // Must override the abstract Properties from base class Shapes.
