@@ -8,6 +8,7 @@ public class MainManager : MonoBehaviour
 {
     private Text _text;
     
+    
 
     private void Awake()
     {
@@ -58,8 +59,7 @@ public class MainManager : MonoBehaviour
             {
                 
                 GameObject _target = hit.collider.gameObject;
-                string _name = _target.GetComponentInParent<Shapes>().Name;
-                float _rotatingSpeed = _target.GetComponentInParent<Shapes>().rotatingSpeed;
+                var _name = _target.GetComponentInParent<Shapes>().Name;
                 int _faces = _target.GetComponentInParent<Shapes>().Faces;
 
                 _text.text = $"Hello, I am a {_name}.\n\n" +
@@ -76,6 +76,8 @@ public class MainManager : MonoBehaviour
                 
                 // User clicked empty space, reset scene
                 ResetScene();
+
+                
                 
             }
         }
